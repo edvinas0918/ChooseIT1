@@ -17,6 +17,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import info.androidhive.materialdesign.model.Restaurant;
 
 /**
@@ -25,10 +28,11 @@ import info.androidhive.materialdesign.model.Restaurant;
 public class MapFragment extends SupportMapFragment implements LocationListener, OnMapReadyCallback {
 
     private MainActivity activity;
-    public Restaurant restaurant;
+    public List<Restaurant> restaurantList;
 
     public MapFragment() {
         super();
+        restaurantList = new ArrayList<>();
         // Required empty public constructor
     }
 
@@ -65,13 +69,17 @@ public class MapFragment extends SupportMapFragment implements LocationListener,
 
         LatLng location = activity.getLocationLatLng();
         getMap().addMarker(new MarkerOptions().position(location));
+        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
         addRestaurantMarkersToMap();
     }
 
     public void addRestaurantMarkersToMap() {
 
-        getMap().addMarker(new MarkerOptions().position(activity.getRestaurantLocationLatLng(restaurant))).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
-        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(activity.getRestaurantLocationLatLng(restaurant), 15));
+        for (Restaurant restaurant : restaurantList){
+            getMap().addMarker(new MarkerOptions().position(activity.getRestaurantLocationLatLng(restaurant))).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+            getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(activity.getRestaurantLocationLatLng(restaurant), 15));
+        }
+
       /*  List<Restaurant> restaurants = activity.getRestaurantList();
         for (Restaurant restaurant:restaurants) {
             getMap().addMarker(new MarkerOptions().position(activity.getRestaurantLocation(restaurant)));

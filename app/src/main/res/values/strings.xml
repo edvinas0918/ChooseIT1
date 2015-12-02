@@ -1,23 +1,38 @@
 <resources>
-    <string name="app_name">Material Design</string>
+    <string name="app_name">ChooseIT</string>
     <string name="action_settings">Settings</string>
     <string name="action_search">Search</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
 
-    <string name="nav_item_home">Home</string>
-    <string name="nav_item_friends">Friends</string>
-    <string name="nav_item_notifications">Messages</string>
+    <string name="nav_item_restaurantList">Restaurants</string>
+    <string name="nav_item_restaurantsInMap">Restaurants (in map)</string>
+    <string name="nav_item_settings">Settings</string>
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
-        <item>@string/nav_item_home</item>
-        <item>@string/nav_item_friends</item>
-        <item>@string/nav_item_notifications</item>
+        <item>@string/nav_item_restaurantList</item>
+        <item>@string/nav_item_restaurantsInMap</item>
+        <item>@string/nav_item_settings</item>
     </string-array>
 
     <string name="title_messages">Messages</string>
     <string name="title_friends">Friends</string>
     <string name="title_home">Home</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_settings">Settings</string>
+
+    <string name="price_from">Kaina nuo</string>
+    <string name="price_to">Kaina iki</string>
+    <string name="selected_distance">Pasirinkta</string>
+    <string name="select_max_distance">Pasirinkite maksimalų atstumą</string>
+
+    <string name="select_price_interv">Pasirinkite kainos ribojimą</string>
+    <string name="save_settings">Išsaugoti pakeitimus</string>
+    <string name="SelectOptions">Pasirinkite Sąlygas</string>
+
+    <string name="no_restaurants">Pagal nustatytas salygas restoranų nerasta</string>
+    <string name="title_restaurants_in_map">Restaurants (In map)</string>
+    <string name="title_restaurantList">Restaurants</string>
+    no_restaurants
 </resources>

@@ -9,11 +9,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import info.androidhive.materialdesign.R;
 import info.androidhive.materialdesign.adapter.RestaurantListAdapter;
+import info.androidhive.materialdesign.model.Restaurant;
 
 /**
  * Created by Edvinas.Barickis on 12/1/2015.
@@ -26,7 +29,7 @@ public class RestaurantListFragment extends Fragment{
     }
 
     MainActivity activity;
-
+    List<Restaurant> restaurants;
     RecyclerView listView;
     RestaurantListAdapter adapter;
     // public ArrayList<RestaurantListModel> RestaurantListItems = new ArrayList<RestaurantListModel>();
@@ -44,24 +47,31 @@ public class RestaurantListFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_restaurant_list, container, false);
         LinearLayoutManager llm = new LinearLayoutManager(activity);
         listView = (RecyclerView) view.findViewById(R.id.restaurantList);
+        TextView emptyView = (TextView) view.findViewById(R.id.empty_view);
 
-        /**************** Create Custom Adapter *********/
-        adapter = new RestaurantListAdapter(activity, (ArrayList)activity.getRestaurantList(), this);
+        if (restaurants.isEmpty()) {
+            listView.setVisibility(View.GONE);
+            emptyView.setVisibility(View.VISIBLE);
+        } else {
+            listView.setVisibility(View.VISIBLE);
+            emptyView.setVisibility(View.GONE);
+        }
+        adapter = new RestaurantListAdapter(activity, restaurants, this);
         listView.setLayoutManager(llm);
         listView.setAdapter(adapter);
 
         return view;
     }
 
-    private MealListFragment mealsListFragment;
+    private RestaurantFragment restaurantFragment;
 
     public void onItemClick(int mPosition) {
-        if (mealsListFragment == null) {
-            mealsListFragment = new MealListFragment();
+        if (restaurantFragment == null) {
+            restaurantFragment = new RestaurantFragment();
         }
 
-        mealsListFragment.restaurant = activity.getRestaurantList().get(mPosition);
-        activity.changeFragment(R.id.container_body, mealsListFragment);
+        restaurantFragment.restaurant = restaurants.get(mPosition);
+        activity.changeFragment(R.id.container_body, restaurantFragment);
     }
 
     @Override

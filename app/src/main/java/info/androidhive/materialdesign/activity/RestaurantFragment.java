@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ListView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,17 +16,17 @@ import info.androidhive.materialdesign.model.Meal;
 import info.androidhive.materialdesign.model.Restaurant;
 
 /**
- * Created by Edvinas.Barickis on 12/2/2015.
+ * Created by Edvinas.Barickis on 12/3/2015.
  */
-public class MealListFragment extends Fragment {
+public class RestaurantFragment extends Fragment {
 
     public Restaurant restaurant;
 
-    public MealListFragment() {
-        // Required empty public constructor
+    public RestaurantFragment() {
     }
 
     private MainActivity activity;
+
     public ArrayList<Meal> MealsListItems = new ArrayList<>();
 
     @Override
@@ -39,14 +39,16 @@ public class MealListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_meal_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_restaurant, container, false);
 
         //setListData();
         ((TextView)view.findViewById(R.id.tv_restaurant_name)).setText(restaurant.getRestName());
         ((TextView)view.findViewById(R.id.tv_adress)).setText(restaurant.getAddress());
         ((TextView)view.findViewById(R.id.tv_phone_nr)).setText(restaurant.getPhoneNumber());
 
-        Button mapButton = (Button) view.findViewById(R.id.btn_map);
+        ((TextView)view.findViewById(R.id.tv_rest_dist)).setText(String.valueOf(activity.getLocation().distanceTo(restaurant.getLocation())/1000) + " km");
+
+        ImageButton mapButton = (ImageButton) view.findViewById(R.id.img_btn_adress);
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

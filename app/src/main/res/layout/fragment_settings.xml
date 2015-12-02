@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_settings"
+        android:id="@+id/btn_select_options_next"
+        android:layout_marginBottom="42dp"
+        android:layout_alignParentBottom="true"
+        android:nestedScrollingEnabled="false"
+        android:onClick="button_select_options_next_click"
+        android:layout_gravity="bottom"
+        android:layout_alignRight="@+id/tv_pr_to"
+        android:layout_alignEnd="@+id/tv_pr_to"
+        android:layout_alignLeft="@+id/sp_pr_from"
+        android:layout_alignStart="@+id/sp_pr_from" />
+
+    <Spinner
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp_pr_from"
+        android:layout_gravity="center_vertical"
+        android:layout_above="@+id/btn_select_options_next"
+        android:layout_alignLeft="@+id/tv_select_options"
+        android:layout_alignStart="@+id/tv_select_options" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/select_price_interv"
+        android:id="@+id/select_price"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/tv_prog"
+        android:layout_alignLeft="@+id/sp_pr_from"
+        android:layout_alignStart="@+id/sp_pr_from" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:id="@+id/sb_dist"
+        android:layout_gravity="left|bottom"
+        android:gravity = "center_horizontal"
+        android:layout_below="@+id/tv_select_distance"
+        android:thumb="@drawable/red_scrubber_controll"
+        android:indeterminate="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/select_max_distance"
+        android:id="@+id/tv_select_distance"
+        android:layout_marginTop="41dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_below="@+id/tv_select_options"
+        android:layout_alignRight="@+id/sp_pr_to"
+        android:layout_alignEnd="@+id/sp_pr_to" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/SelectOptions"
+        android:id="@+id/tv_select_options"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:layout_gravity="center_horizontal|top" />
+
+    <Spinner
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp_pr_to"
+        android:layout_gravity="left|bottom"
+        android:layout_below="@+id/tv_pr_to"
+        android:layout_alignLeft="@+id/tv_pr_to"
+        android:layout_alignStart="@+id/tv_pr_to" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/selected_distance"
+        android:id="@+id/tv_prog"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/sb_dist"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/price_from"
+        android:id="@+id/tv_pr_from"
+        android:layout_above="@+id/sp_pr_from"
+        android:layout_alignLeft="@+id/sp_pr_from"
+        android:layout_alignStart="@+id/sp_pr_from" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/price_to"
+        android:id="@+id/tv_pr_to"
+        android:layout_alignTop="@+id/tv_pr_from"
+        android:layout_alignRight="@+id/tv_select_options"
+        android:layout_alignEnd="@+id/tv_select_options" />
+
+</RelativeLayout>

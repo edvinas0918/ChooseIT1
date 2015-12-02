@@ -32,6 +32,41 @@ import info.androidhive.materialdesign.model.Restaurant;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener{
 
+    private int seekBarProgress;
+    private String spinnerPriceFrom;
+    private String spinnerPriceTo;
+
+    public void SetSeekBarProgress(int seekBarProgress) {
+        this.seekBarProgress = seekBarProgress;
+    }
+
+    public int GetSeekBarBrogress() {
+        return this.seekBarProgress;
+    }
+
+    public void SetSpinnerPriceFrom(String spinnerPriceFrom) {
+        this.spinnerPriceFrom = spinnerPriceFrom;
+    }
+
+    public String GetSpinnerPriceFrom() {
+        return this.spinnerPriceFrom;
+    }
+
+    public void SetSpinnerPriceTo(String spinnerPriceTo) {
+        this.spinnerPriceTo = spinnerPriceTo;
+    }
+
+    public String GetSpinnerPriceTo() {
+        return this.spinnerPriceTo;
+    }
+
+    public void saveOptionsValues(int seekBarValue, String spinnerFromValue, String spinnerToValue) {
+
+        SetSeekBarProgress(seekBarValue);
+        SetSpinnerPriceFrom(spinnerFromValue);
+        SetSpinnerPriceTo(spinnerToValue);
+    }
+
     private static String TAG = MainActivity.class.getSimpleName();
 
     private Toolbar mToolbar;
@@ -41,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        saveOptionsValues(10, "0", "10");
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -52,9 +89,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
         drawerFragment.setDrawerListener(this);
 
-        // display the first navigation drawer view on app launch
-        //displayView(0);
-        changeFragment(R.id.container_body, new RestaurantListFragment());
+        RestaurantListFragment rlf = new RestaurantListFragment();
+        rlf.restaurants = getRestaurantList();
+
+        changeFragment(R.id.container_body, rlf);
     }
 
 
@@ -95,30 +133,49 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-                fragment = new HomeFragment();
-                title = getString(R.string.title_home);
+                fragment = new RestaurantListFragment();
+                ((RestaurantListFragment)fragment).restaurants = getRestaurantList(GetSeekBarBrogress());
+                title = getString(R.string.title_restaurantList);
                 break;
             case 1:
-                fragment = new FriendsFragment();
-                title = getString(R.string.title_friends);
+                fragment = new MapFragment();
+                ((MapFragment)fragment).restaurantList = getRestaurantList(GetSeekBarBrogress());
+                title = getString(R.string.title_restaurants_in_map);
                 break;
             case 2:
-                fragment = new MessagesFragment();
-                title = getString(R.string.title_messages);
+                fragment = new SettingsFragment();
+                title = getString(R.string.title_settings);
                 break;
             default:
                 break;
         }
 
         if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_body, fragment);
-            fragmentTransaction.commit();
-
-            // set the toolbar title
+            changeFragment(R.id.container_body, fragment);
             getSupportActionBar().setTitle(title);
         }
+    }
+
+    public List<Restaurant> getRestaurantList(int distance) {
+        List<Restaurant> allRestaurants = getRestaurantList();
+        List<Restaurant> resultRestaurants = new ArrayList<>();
+        LatLng currentLoc = getLocationLatLng();
+        Location currentLocation = new Location("Current");
+        currentLocation.setLatitude(currentLoc.latitude);
+        currentLocation.setLongitude(currentLoc.longitude);
+
+        for (int i = 0; i < allRestaurants.size(); i++) {
+            Restaurant restaurant = allRestaurants.get(i);
+           /* Location restaurantLocation = new Location("RestaurantLocation");
+            restaurantLocation.setLatitude(restaurant.getLattitude());
+            restaurantLocation.setLongitude(restaurant.getLongtitude());*/
+
+
+            if (currentLocation.distanceTo(restaurant.getLocation()) <= distance * 1000) {
+                resultRestaurants.add(restaurant);
+            }
+        }
+        return resultRestaurants;
     }
 
     public List<Meal> getRestaurantMeals(Restaurant restaurant, double minPrice, double maxPrice) {
