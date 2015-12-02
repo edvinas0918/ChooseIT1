@@ -1,0 +1,120 @@
+{
+  "Restaurants": [
+    {
+      "name": "Čili Kinija",
+      "address": "Rinktinės g. 13",
+      "Latitude": "54.696580",
+      "Longtitude": "25.288889",
+      "phoneNumber": "+37064859325",
+      "Meals": [
+        {
+          "Name": " Gong Bao",
+          "Price": " 3 ",
+          "Ingredients":  " Chicken, Orange"
+        },
+        {
+          "Name": " Gua Bao",
+          "Price": " 6 ",
+          "Ingredients": " Chicken, Tomato"
+        },
+        {
+          "Name": " FishAndChips ",
+          "Price": " 5 ",
+          "Ingredients": " Fish, Potato"
+        },
+        {
+          "Name": " Vyšnaitės ",
+          "Price": " 4 ",
+          "Ingredients": " Chicken, Tomato, CherrySauce "
+        }
+      ]
+    },
+    {
+      "name": "Čili Pica",
+      "address": "Ozo g. 25",
+      "Latitude": "54.709877",
+      "Longtitude": "25.261440",
+      "phoneNumber": "+37065236948",
+      "Meals": [
+        {
+          "Name": " Kaprio",
+          "Price": " 3.50 ",
+          "Ingredients": " Pickles, Salami"
+        },
+        {
+          "Name": " Metų laikai",
+          "Price": " 4.20 ",
+          "Ingredients": " Cheese, beef"
+        },
+        {
+          "Name": " Havajų ",
+          "Price": " 4.70 ",
+          "Ingredients": " Cheese, salamni, pineapple"
+        },
+        {
+          "Name": " Studentų ",
+          "Price": " 2.49 ",
+          "Ingredients": " Cheese, salami"
+        }
+      ]
+    },
+    {
+      "name": "Charlie",
+      "address": "Justiniškių g. 91",
+      "Latitude": "54.717484",
+      "Longtitude": "25.222463",
+      "phoneNumber": "+37064857894",
+      "Meals": [
+        {
+          "Name": " Šefo paprastoji",
+          "Price": " 2.13 ",
+          "Ingredients": " Pickles, Salami"
+        },
+        {
+          "Name": " Margarita ",
+          "Price": " 1.79 ",
+          "Ingredients": " Pickles, Salami"
+        },
+        {
+          "Name": " Šefo perlektoji ",
+          "Price": " 2.59 ",
+          "Ingredients": " Pickles, Salami"
+        },
+        {
+          "Name": " Storapadė ",
+          "Price": " 3.13 ",
+          "Ingredients": " Pickles, Salami"
+        }
+      ]
+    },
+    {
+      "name": "HBH",
+      "address": "Raudondvaris",
+      "Latitude": "54.826889",
+      "Longtitude": "25.276659",
+      "phoneNumber": "+37064153325",
+      "Meals": [
+        {
+          "Name": " Charčio ",
+          "Price": " 3.49 ",
+          "Ingredients": " Beef, potatoes"
+        },
+        {
+          "Name": " Cepelinai ",
+          "Price": " 2.89 ",
+          "Ingredients": " Pork, potatoes"
+        },
+        {
+          "Name": " Aviena vyno padaže",
+          "Price": " 5.40 ",
+          "Ingredients": " lamb, vine "
+        },
+        {
+          "Name": " Kiaulienos šašlykas ",
+          "Price": " 7.12 ",
+          "Ingredients": " Pork, tomato"
+        }
+      ]
+    }
+  ]
+}

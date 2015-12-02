@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/lv_mealsList"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/btn_map"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="1px"
+        android:layout_alignEnd="@+id/btn_map"
+        android:layout_marginBottom="90dp"
+        android:layout_below="@+id/tv_meals_list" />
+
+
+
+    <!--  <fragment
+          android:layout_alignRight="@+id/btn_map"
+          android:layout_alignEnd="@+id/btn_map"
+          android:layout_marginBottom="90dp" /> -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="restaurant_name"
+        android:id="@+id/tv_restaurant_name"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="address"
+        android:id="@+id/tv_adress"
+        android:layout_below="@+id/tv_restaurant_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="22dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="phoneNumber"
+        android:id="@+id/tv_phone_nr"
+        android:layout_below="@+id/tv_adress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="map"
+        android:id="@+id/btn_map"
+        android:layout_below="@+id/tv_restaurant_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="meal_list"
+        android:id="@+id/tv_meals_list"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btn_map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rate"
+        android:id="@+id/tv_rate_it"
+        android:layout_above="@+id/ratingBar"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
