@@ -1,136 +1,177 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_below="@+id/toolbar"
+    android:background="@color/windowBackground">-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_below="@id/toolbar"
     android:background="@color/windowBackground">
 
-
-    <ImageView
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
-        android:layout_height="168dp"
-        android:id="@+id/img_rest"
-        android:src="@drawable/restaurant_logo"
-        android:background="@color/windowBackground"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:id="@id/tv_restaurant_name"
-        android:layout_marginTop="20dp"
-        android:text="Restoranas"
-        android:textSize="32dp"
-        android:layout_below="@+id/img_rest"
-        android:layout_centerHorizontal="true" />
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        style="?android:attr/ratingBarStyleIndicator"
-        android:id="@+id/ratingBar"
-        android:numStars="5"
-        android:isIndicator="false"
-        android:layout_below="@id/tv_restaurant_name"
-        android:layout_alignStart="@+id/tv_restaurant_name"
-        android:layout_alignLeft="@+id/tv_restaurant_name"/>
 
-    <View
-        android:id="@+id/separator1"
-        android:background="@color/colorPrimary"
-        android:layout_marginTop="15dp"
-        android:layout_width = "fill_parent"
-        android:layout_height="1dip"
-        android:layout_below="@+id/ratingBar"
-        android:layout_alignStart="@+id/tv_restaurant_name"
-        android:layout_alignLeft="@+id/tv_restaurant_name" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_rest_dist"
-        android:text="Distance"
-        android:textColor="@color/colorAccent"
-        android:layout_below="@+id/separator1"
-        android:layout_alignStart="@+id/tv_restaurant_name"
-        android:layout_alignLeft="@+id/tv_restaurant_name"
-        android:textSize="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"/>
-    <View
-        android:id="@+id/separator2"
-        android:background="@color/colorPrimary"
-        android:layout_width = "fill_parent"
-        android:layout_height="1dip"
-        android:layout_below="@+id/tv_rest_dist"
-        android:layout_alignStart="@+id/tv_restaurant_name"
-        android:layout_alignLeft="@+id/tv_restaurant_name" />
+            <ImageView
+                android:id="@+id/img_rest"
+                android:layout_width="fill_parent"
+                android:layout_height="160dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/windowBackground"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/restaurant_logo" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Adress"
-        android:id="@+id/tv_adress"
-        android:textSize="20dp"
-        android:layout_below="@+id/separator2"
-        android:layout_alignStart="@+id/tv_restaurant_name"
-        android:layout_alignLeft="@+id/tv_restaurant_name"
-        />
+            <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:showIn="@layout/activity_scrolling">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/tv_phone_nr"
-        android:textSize="20dp"
-        android:layout_below="@+id/tv_adress"
-        android:layout_alignStart="@+id/tv_restaurant_name"
-        android:layout_alignLeft="@+id/tv_restaurant_name"
-        />
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Working hours"
-        android:id="@+id/tv_working_hours"
-        android:textSize="20dp"
-        android:layout_below="@+id/tv_phone_nr"
-        android:layout_alignStart="@+id/tv_restaurant_name"
-        android:layout_alignLeft="@+id/tv_restaurant_name"
-        />
+                    <TextView
+                        android:id="@id/tv_restaurant_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="180dp"
+                        android:gravity="center_horizontal"
+                        android:text="Restoranas"
+                        android:textAlignment="center"
+                        android:textSize="32dp" />
 
-    <ImageButton
-        android:id="@+id/img_btn_adress"
-        android:src="@drawable/ic_marker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/windowBackground"
-        android:layout_marginLeft="20dp"
-        android:layout_alignTop="@+id/tv_adress"/>
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_restaurant_name"
+                        android:layout_alignStart="@+id/tv_restaurant_name"
+                        android:layout_below="@id/tv_restaurant_name"
+                        android:layout_marginTop="16dp"
+                        android:isIndicator="false"
+                        android:numStars="5" />
 
-    <ImageButton
-        android:id="@+id/img_btn_phone"
-        android:src="@drawable/ic_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/windowBackground"
-        android:layout_marginLeft="20dp"
-        android:layout_alignTop="@+id/tv_phone_nr"/>
+                    <View
+                        android:id="@+id/separator1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/tv_restaurant_name"
+                        android:layout_alignStart="@+id/tv_restaurant_name"
+                        android:layout_below="@+id/ratingBar"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimary" />
 
-    <ImageView
-        android:id="@+id/img_btn_works"
-        android:src="@drawable/ic_clock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/windowBackground"
-        android:layout_marginLeft="20dp"
-        android:layout_alignTop="@+id/tv_working_hours"/>
+                    <TextView
+                        android:id="@+id/tv_rest_dist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_restaurant_name"
+                        android:layout_alignStart="@+id/tv_restaurant_name"
+                        android:layout_below="@+id/separator1"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Distance"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24dp" />
 
-</RelativeLayout>
+                    <View
+                        android:id="@+id/separator2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/tv_restaurant_name"
+                        android:layout_alignStart="@+id/tv_restaurant_name"
+                        android:layout_below="@+id/tv_rest_dist"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_adress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_restaurant_name"
+                        android:layout_alignStart="@+id/tv_restaurant_name"
+                        android:layout_below="@+id/separator2"
+                        android:layout_marginTop="32dp"
+                        android:text="Adress"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_nr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_restaurant_name"
+                        android:layout_alignStart="@+id/tv_restaurant_name"
+                        android:layout_below="@+id/tv_adress"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Phone"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_working_hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_restaurant_name"
+                        android:layout_alignStart="@+id/tv_restaurant_name"
+                        android:layout_below="@+id/tv_phone_nr"
+                        android:text="Working hours"
+                        android:textSize="24dp" />
+
+                    <ImageButton
+                        android:id="@+id/img_btn_adress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tv_adress"
+                        android:layout_marginLeft="24dp"
+                        android:background="@color/windowBackground"
+                        android:src="@drawable/ic_marker" />
+
+                    <ImageButton
+                        android:id="@+id/img_btn_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tv_phone_nr"
+                        android:layout_marginLeft="24dp"
+                        android:background="@color/windowBackground"
+                        android:src="@drawable/ic_phone" />
+
+                    <ImageView
+                        android:id="@+id/img_btn_works"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tv_working_hours"
+                        android:layout_marginLeft="24dp"
+                        android:background="@color/windowBackground"
+                        android:src="@drawable/ic_clock" />
+
+                </RelativeLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_dialog_email"
+            app:layout_anchor="@id/img_rest"
+            app:layout_anchorGravity="bottom|end" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>
+
