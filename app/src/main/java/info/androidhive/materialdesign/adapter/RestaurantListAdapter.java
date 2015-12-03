@@ -57,8 +57,8 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
             holder.tv_name.setText(tempValues.getRestName());
             holder.tv_description.setText(tempValues.getAddress());
             Float distance = ((MainActivity) context).getLocation().distanceTo(tempValues.getLocation()) / 1000;
-            String distanceString = String.format("%.1f", distance);
-            holder.tv_distance.setText(distanceString + " km");
+            String distanceString = String.format("%.1f km", distance);
+            holder.tv_distance.setText(distanceString);
             /*holder.image.setImageResource(
                     res.getIdentifier(
                             "com.example.kasparas.choseit:drawable/"+tempValues.getImage()

@@ -1,7 +1,12 @@
 package info.androidhive.materialdesign.activity;
 
+import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,8 +50,9 @@ public class RestaurantFragment extends Fragment {
         ((TextView)view.findViewById(R.id.tv_restaurant_name)).setText(restaurant.getRestName());
         ((TextView)view.findViewById(R.id.tv_adress)).setText(restaurant.getAddress());
         ((TextView)view.findViewById(R.id.tv_phone_nr)).setText(restaurant.getPhoneNumber());
-
-        ((TextView)view.findViewById(R.id.tv_rest_dist)).setText(String.valueOf(activity.getLocation().distanceTo(restaurant.getLocation())/1000) + " km");
+        Float distance = activity.getLocation().distanceTo(restaurant.getLocation())/1000;
+        String distanceString =String.format("%.1f km", distance);
+        ((TextView)view.findViewById(R.id.tv_rest_dist)).setText(distanceString);
 
         ImageButton mapButton = (ImageButton) view.findViewById(R.id.img_btn_adress);
         mapButton.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +63,20 @@ public class RestaurantFragment extends Fragment {
                 restaurants.add(restaurant);
                 mf.restaurantList = restaurants;
                 activity.changeFragment(R.id.container_body, mf);
+            }
+        });
+
+        ImageButton phoneButton = (ImageButton) view.findViewById(R.id.img_btn_phone);
+        phoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                try {
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse("tel:" + restaurant.getPhoneNumber().toString()));
+                    startActivity(callIntent);
+                } catch (ActivityNotFoundException activityException) {
+                    Log.e("Calling a Phone Number", "Call failed", activityException);
+                }
             }
         });
         /*Resources res = getResources();
