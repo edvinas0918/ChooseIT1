@@ -44,5 +44,12 @@
         android:layout_marginTop="16dp"
         android:background="#CCCCCC" />
 
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/imageView"
+
+        android:src="@drawable/img"/>
+
 
 </RelativeLayout>
