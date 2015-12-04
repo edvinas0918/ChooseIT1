@@ -16,13 +16,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -143,6 +147,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_restaurants_in_map);
                 break;
             case 2:
+                fragment = new SuggestRestaurantFragment();
+                title=getString(R.string.title_suggest_restaurant);
+                break;
+            case 3:
                 fragment = new SettingsFragment();
                 title = getString(R.string.title_settings);
                 break;
@@ -170,10 +178,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             restaurantLocation.setLatitude(restaurant.getLattitude());
             restaurantLocation.setLongitude(restaurant.getLongtitude());*/
 
-
-            if (currentLocation.distanceTo(restaurant.getLocation()) <= distance * 1000) {
+            if (restaurant.getDistanceTo(getLocation()) <= distance * 1000) {
                 resultRestaurants.add(restaurant);
             }
+            /*if (currentLocation.distanceTo(restaurant.getLocation()) <= distance * 1000) {
+                resultRestaurants.add(restaurant);
+            }*/
         }
         return resultRestaurants;
     }
@@ -260,6 +270,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         String json = null;
         try {
             InputStream is = getResources().openRawResource(R.raw.restaurant_data);
+
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -271,6 +282,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         }
         return json;
     }
+
     /************************ Reading restaurant data from file end**************************/
 
     public void changeFragment(int containerId, Fragment fragment) {
@@ -314,5 +326,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     public LatLng getRestaurantLocationLatLng(Restaurant restaurant) {
         return new LatLng(restaurant.getLattitude(), restaurant.getLongtitude());
+    }
+
+    public void saveNewRestaurant(Restaurant newRestaurant) {
+        restaurantList.add(newRestaurant);
+
+       // String restaurantString = new Gson().toJson(restaurantList);
+       // writeJSONStringToFile(restaurantString);
     }
 }

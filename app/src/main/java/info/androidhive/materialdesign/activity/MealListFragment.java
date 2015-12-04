@@ -1,7 +1,10 @@
 package info.androidhive.materialdesign.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +13,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import info.androidhive.materialdesign.R;
+import info.androidhive.materialdesign.adapter.MealListAdapter;
+import info.androidhive.materialdesign.adapter.RestaurantListAdapter;
 import info.androidhive.materialdesign.model.Meal;
 import info.androidhive.materialdesign.model.Restaurant;
 
@@ -27,7 +33,9 @@ public class MealListFragment extends Fragment {
     }
 
     private MainActivity activity;
-    public ArrayList<Meal> MealsListItems = new ArrayList<>();
+    public List<Meal> MealsListItems;
+    RecyclerView listView;
+    MealListAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,39 +49,35 @@ public class MealListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_meal_list, container, false);
 
-        //setListData();
-        ((TextView)view.findViewById(R.id.tv_restaurant_name)).setText(restaurant.getRestName());
-        ((TextView)view.findViewById(R.id.tv_adress)).setText(restaurant.getAddress());
-        ((TextView)view.findViewById(R.id.tv_phone_nr)).setText(restaurant.getPhoneNumber());
-
-        Button mapButton = (Button) view.findViewById(R.id.btn_map);
-        mapButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MapFragment mf = new MapFragment();
-                ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
-                restaurants.add(restaurant);
-                mf.restaurantList = restaurants;
-                activity.changeFragment(R.id.container_body, mf);
-            }
-        });
-        /*Resources res = getResources();
-        list = (ListView) view.findViewById(R.id.lv_mealsList);
+        LinearLayoutManager llm = new LinearLayoutManager(activity);
+        listView = (RecyclerView) view.findViewById(R.id.mealList);
+        TextView emptyView = (TextView) view.findViewById(R.id.meal_list_empty_view);
 
 
         List<Meal> mealList = activity.getRestaurantMeals(restaurant, Double.valueOf(activity.GetSpinnerPriceFrom()),Double.valueOf( activity.GetSpinnerPriceTo()));
-        adapter = new MealsListAdaptor(activity, this, (ArrayList)mealList, res);
-        list.setAdapter(adapter);
+        adapter = new MealListAdapter(activity, (ArrayList)mealList, this);
 
-        Button mapButton = (Button) view.findViewById(R.id.btn_map);
-        mapButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MapFragment mf = new MapFragment();
-                mf.restaurant = restaurant;
-                ((MainActivity) getActivity()).changeFragment(R.id.main, mf);
-            }
-        });*/
+        if (mealList.isEmpty()) {
+            listView.setVisibility(View.GONE);
+            emptyView.setVisibility(View.VISIBLE);
+        } else {
+            listView.setVisibility(View.VISIBLE);
+            emptyView.setVisibility(View.GONE);
+        }
+
+        listView.setLayoutManager(llm);
+        listView.setAdapter(adapter);
+
         return view;
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
     }
 }

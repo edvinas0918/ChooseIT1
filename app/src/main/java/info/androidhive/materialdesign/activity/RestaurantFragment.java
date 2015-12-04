@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -50,8 +51,8 @@ public class RestaurantFragment extends Fragment {
         ((TextView)view.findViewById(R.id.tv_restaurant_name)).setText(restaurant.getRestName());
         ((TextView)view.findViewById(R.id.tv_adress)).setText(restaurant.getAddress());
         ((TextView)view.findViewById(R.id.tv_phone_nr)).setText(restaurant.getPhoneNumber());
-        Float distance = activity.getLocation().distanceTo(restaurant.getLocation())/1000;
-        String distanceString =String.format("%.1f km", distance);
+        Float distance = restaurant.getDistanceTo(activity.getLocation())/1000;
+        String distanceString = (distance == 0) ? "Not set" : String.format("%.1f km", distance);
         ((TextView)view.findViewById(R.id.tv_rest_dist)).setText(distanceString);
 
         ImageButton mapButton = (ImageButton) view.findViewById(R.id.img_btn_adress);
@@ -77,6 +78,18 @@ public class RestaurantFragment extends Fragment {
                 } catch (ActivityNotFoundException activityException) {
                     Log.e("Calling a Phone Number", "Call failed", activityException);
                 }
+            }
+        });
+
+        FloatingActionButton mealListButton = (FloatingActionButton) view.findViewById(R.id.fab_meal_list);
+
+        mealListButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                MealListFragment mealListFragment = new MealListFragment();
+                mealListFragment.restaurant = restaurant;
+                activity.changeFragment(R.id.container_body, mealListFragment);
             }
         });
         /*Resources res = getResources();

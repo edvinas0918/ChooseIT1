@@ -47,7 +47,7 @@ public class RestaurantListFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_restaurant_list, container, false);
         LinearLayoutManager llm = new LinearLayoutManager(activity);
         listView = (RecyclerView) view.findViewById(R.id.restaurantList);
-        TextView emptyView = (TextView) view.findViewById(R.id.empty_view);
+        TextView emptyView = (TextView) view.findViewById(R.id.restaurant_list_empty_view);
 
         if (restaurants.isEmpty()) {
             listView.setVisibility(View.GONE);

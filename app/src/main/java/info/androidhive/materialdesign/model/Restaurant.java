@@ -2,6 +2,8 @@ package info.androidhive.materialdesign.model;
 
 import android.location.Location;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,9 +38,15 @@ public class Restaurant {
     }
 
     public List<Meal> getMealList () {
+        if (mealList == null) {
+            return new ArrayList<>();
+        }
+
         return mealList;
     }
+
     public void setMealList(List<Meal> mealList) {
+
         if (mealList == null) {
             this.mealList = new ArrayList<Meal>();
         } else {
@@ -80,7 +88,19 @@ public class Restaurant {
     }
 
     public float getDistanceTo (Restaurant restaurant) {
+        if (restaurant.getLongtitude()== 0 || longtitude == 0) {
+            return 0;
+        }
+
         return getLocation().distanceTo(restaurant.getLocation());
+    }
+
+    public float getDistanceTo (Location location) {
+        if (location.getLongitude() == 0 || longtitude == 0) {
+            return 0;
+        }
+
+        return getLocation().distanceTo(location);
     }
 
     public Location getLocation () {

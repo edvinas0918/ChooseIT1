@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/et_phone_number"
+        android:layout_marginBottom="161dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_restaurant_name"
+        android:layout_above="@+id/et_restaurant_address"
+        android:layout_alignLeft="@+id/et_restaurant_address"
+        android:layout_alignStart="@+id/et_restaurant_address"
+        android:layout_marginBottom="67dp"
+        android:phoneNumber="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/et_restaurant_address"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/et_phone_number"
+        android:layout_alignStart="@+id/et_phone_number" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suggest"
+        android:id="@+id/btn_suggest_restaurant"
+        android:layout_alignTop="@+id/et_phone_number"
+        android:layout_alignLeft="@+id/et_phone_number"
+        android:layout_alignStart="@+id/et_phone_number"
+        android:layout_marginTop="74dp"
+        android:layout_alignRight="@+id/et_phone_number"
+        android:layout_alignEnd="@+id/et_phone_number" />
+</RelativeLayout>
