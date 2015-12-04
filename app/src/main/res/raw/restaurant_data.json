@@ -115,6 +115,317 @@
           "Ingredients": " Pork, tomato"
         }
       ]
+    },
+    {
+      "name": "Briusly",
+      "address": "Islandijos g. 4",
+      "Latitude": "54.684146",
+      "Longtitude": "25.277884",
+      "phoneNumber": "+37064153325",
+      "Meals": [
+        {
+          "Name": " Tom Yum ",
+          "Price": " 5.50 ",
+          "Ingredients": "Shrimps, rice"
+        },
+        {
+          "Name": "Panini su bulvytėmis ",
+          "Price": " 5.29 ",
+          "Ingredients": "Potatoes, tomato souce, pork, onions"
+        },
+        {
+          "Name": " Tailandietiški makaronai",
+          "Price": " 5.40 ",
+          "Ingredients": " Pasta, shrimps"
+        },
+        {
+          "Name": "Tailandietiški koldūnai ",
+          "Price": " 7.12 ",
+          "Ingredients": "Dumblings, shrimps"
+        }
+      ]
+    }
+  ,
+    {
+      "name": "Stebuklai",
+      "address": "Gynėju g. 14",
+      "Latitude": "54.692115",
+      "Longtitude": "25.264171",
+      "phoneNumber": "+37064153325",
+      "Meals": [
+        {
+          "Name": " Tom Yum ",
+          "Price": " 5.50 ",
+          "Ingredients": "Shrimps, rice"
+        },
+        {
+          "Name": "Panini su bulvytėmis ",
+          "Price": " 5.29 ",
+          "Ingredients": "Potatoes, tomato souce, pork, onions"
+        },
+        {
+          "Name": " Tailandietiški makaronai",
+          "Price": " 5.40 ",
+          "Ingredients": " Pasta, shrimps"
+        },
+        {
+          "Name": "Tailandietiški koldūnai ",
+          "Price": " 7.12 ",
+          "Ingredients": "Dumblings, shrimps"
+        },
+        {
+          "Name": " Charčio ",
+          "Price": " 3.49 ",
+          "Ingredients": " Beef, potatoes"
+        },
+        {
+          "Name": " Cepelinai ",
+          "Price": " 2.89 ",
+          "Ingredients": " Pork, potatoes"
+        },
+        {
+          "Name": " Aviena vyno padaže",
+          "Price": " 5.40 ",
+          "Ingredients": " lamb, vine "
+        },
+        {
+          "Name": " Kiaulienos šašlykas ",
+          "Price": " 7.12 ",
+          "Ingredients": " Pork, tomato"
+        },
+        {
+          "Name": " Tom Yan ",
+          "Price": " 5.50 ",
+          "Ingredients": "Shrimps, rice"
+        },
+        {
+          "Name": "Panini su makaronais ",
+          "Price": " 5.29 ",
+          "Ingredients": "Pasta, tomato souce, pork, onions"
+        },
+        {
+          "Name": " Tailandietiški ryžiai",
+          "Price": " 5.40 ",
+          "Ingredients": " Rice, shrimps"
+        },
+        {
+          "Name": " Čili sriuba ",
+          "Price": " 3.49 ",
+          "Ingredients": " Beef, cheese, tomato"
+        },
+        {
+          "Name": " Balandėliai ",
+          "Price": " 2.89 ",
+          "Ingredients": " Pork, potatoes"
+        },
+        {
+          "Name": " Jautiena vyno padaže",
+          "Price": " 5.40 ",
+          "Ingredients": " Beef, vine "
+        },
+        {
+          "Name": " Jautienos šašlykas ",
+          "Price": " 7.12 ",
+          "Ingredients": " Beef, potatoes, tomato"
+        }
+      ]
+    },
+    {
+      "name": "Q'polo",
+      "address": "Basanavičiaus g. 4",
+      "Latitude": "54.679858",
+      "Longtitude": "25.276946",
+      "phoneNumber": "+37064153325",
+      "Meals": [
+        {
+          "Name": " Tom Yum ",
+          "Price": " 5.50 ",
+          "Ingredients": "Shrimps, rice"
+        },
+        {
+          "Name": "Panini su bulvytėmis ",
+          "Price": " 5.29 ",
+          "Ingredients": "Potatoes, tomato souce, pork, onions"
+        },
+        {
+          "Name": " Tailandietiški makaronai",
+          "Price": " 5.40 ",
+          "Ingredients": " Pasta, shrimps"
+        },
+        {
+          "Name": "Tailandietiški koldūnai ",
+          "Price": " 7.12 ",
+          "Ingredients": "Dumblings, shrimps"
+        }
+      ]
+    },
+    {
+      "name": "Magic",
+      "address": "Gynėju g. 14",
+      "Latitude": "54.685115",
+      "Longtitude": "25.246171",
+      "phoneNumber": "+37064153325",
+      "Meals": [
+        {
+          "Name": " Tom Yum ",
+          "Price": " 5.50 ",
+          "Ingredients": "Shrimps, rice"
+        },
+        {
+          "Name": "Panini su bulvytėmis ",
+          "Price": " 5.29 ",
+          "Ingredients": "Potatoes, tomato souce, pork, onions"
+        },
+        {
+          "Name": " Tailandietiški makaronai",
+          "Price": " 5.40 ",
+          "Ingredients": " Pasta, shrimps"
+        },
+        {
+          "Name": "Tailandietiški koldūnai ",
+          "Price": " 7.12 ",
+          "Ingredients": "Dumblings, shrimps"
+        },
+        {
+          "Name": " Charčio ",
+          "Price": " 3.49 ",
+          "Ingredients": " Beef, potatoes"
+        },
+        {
+          "Name": " Cepelinai ",
+          "Price": " 2.89 ",
+          "Ingredients": " Pork, potatoes"
+        },
+        {
+          "Name": " Aviena vyno padaže",
+          "Price": " 5.40 ",
+          "Ingredients": " lamb, vine "
+        },
+        {
+          "Name": " Kiaulienos šašlykas ",
+          "Price": " 7.12 ",
+          "Ingredients": " Pork, tomato"
+        },
+        {
+          "Name": " Tom Yan ",
+          "Price": " 5.50 ",
+          "Ingredients": "Shrimps, rice"
+        },
+        {
+          "Name": "Panini su makaronais ",
+          "Price": " 5.29 ",
+          "Ingredients": "Pasta, tomato souce, pork, onions"
+        },
+        {
+          "Name": " Tailandietiški ryžiai",
+          "Price": " 5.40 ",
+          "Ingredients": " Rice, shrimps"
+        },
+        {
+          "Name": " Čili sriuba ",
+          "Price": " 3.49 ",
+          "Ingredients": " Beef, cheese, tomato"
+        },
+        {
+          "Name": " Balandėliai ",
+          "Price": " 2.89 ",
+          "Ingredients": " Pork, potatoes"
+        },
+        {
+          "Name": " Jautiena vyno padaže",
+          "Price": " 5.40 ",
+          "Ingredients": " Beef, vine "
+        },
+        {
+          "Name": " Jautienos šašlykas ",
+          "Price": " 7.12 ",
+          "Ingredients": " Beef, potatoes, tomato"
+        }
+      ]
+    },
+    {
+      "name": "Skanumynas",
+      "address": "Gynėju g. 14",
+      "Latitude": "54.705115",
+      "Longtitude": "25.293171",
+      "phoneNumber": "+37064153325",
+      "Meals": [
+        {
+          "Name": " Tom Yum ",
+          "Price": " 5.50 ",
+          "Ingredients": "Shrimps, rice"
+        },
+        {
+          "Name": "Panini su bulvytėmis ",
+          "Price": " 5.29 ",
+          "Ingredients": "Potatoes, tomato souce, pork, onions"
+        },
+        {
+          "Name": " Tailandietiški makaronai",
+          "Price": " 5.40 ",
+          "Ingredients": " Pasta, shrimps"
+        },
+        {
+          "Name": "Tailandietiški koldūnai ",
+          "Price": " 7.12 ",
+          "Ingredients": "Dumblings, shrimps"
+        },
+        {
+          "Name": " Charčio ",
+          "Price": " 3.49 ",
+          "Ingredients": " Beef, potatoes"
+        },
+        {
+          "Name": " Cepelinai ",
+          "Price": " 2.89 ",
+          "Ingredients": " Pork, potatoes"
+        },
+        {
+          "Name": " Aviena vyno padaže",
+          "Price": " 5.40 ",
+          "Ingredients": " lamb, vine "
+        },
+        {
+          "Name": " Kiaulienos šašlykas ",
+          "Price": " 7.12 ",
+          "Ingredients": " Pork, tomato"
+        },
+        {
+          "Name": " Tom Yan ",
+          "Price": " 5.50 ",
+          "Ingredients": "Shrimps, rice"
+        },
+        {
+          "Name": "Panini su makaronais ",
+          "Price": " 5.29 ",
+          "Ingredients": "Pasta, tomato souce, pork, onions"
+        },
+        {
+          "Name": " Tailandietiški ryžiai",
+          "Price": " 5.40 ",
+          "Ingredients": " Rice, shrimps"
+        },
+        {
+          "Name": " Čili sriuba ",
+          "Price": " 3.49 ",
+          "Ingredients": " Beef, cheese, tomato"
+        },
+        {
+          "Name": " Balandėliai ",
+          "Price": " 2.89 ",
+          "Ingredients": " Pork, potatoes"
+        },
+        {
+          "Name": " Jautiena vyno padaže",
+          "Price": " 5.40 ",
+          "Ingredients": " Beef, vine "
+        },
+        {
+          "Name": " Jautienos šašlykas ",
+          "Price": " 7.12 ",
+          "Ingredients": " Beef, potatoes, tomato"
+        }
+      ]
     }
   ]
 }
