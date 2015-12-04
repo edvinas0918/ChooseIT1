@@ -57,7 +57,7 @@ public class SettingsFragment extends Fragment{
         seek_bar.setDrawingCacheBackgroundColor(Color.CYAN);
         seek_bar.setProgress(previous_progress);
         text_view = (TextView) view.findViewById(R.id.tv_prog);
-        text_view.setText("Pasirinkta : " + seek_bar.getProgress() + " kilometrų");
+        text_view.setText(seek_bar.getProgress() + " km");
         final int progress_value;
         seek_bar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
@@ -67,7 +67,7 @@ public class SettingsFragment extends Fragment{
 
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progress_value = progress;
-                        text_view.setText("Pasirinkta : " + progress + " kilometrų");
+                        text_view.setText(progress + " km");
                     }
 
                     @Override
@@ -77,7 +77,7 @@ public class SettingsFragment extends Fragment{
                     @Override
                     public void onStopTrackingTouch(SeekBar seekBar) {
 
-                        text_view.setText("Pasirinkta : " + progress_value + " kilometrų");
+                        text_view.setText(progress_value + " km");
                     }
                 }
         );

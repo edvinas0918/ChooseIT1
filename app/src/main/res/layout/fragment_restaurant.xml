@@ -140,7 +140,7 @@
                         android:layout_alignTop="@+id/tv_adress"
                         android:layout_marginLeft="24dp"
                         android:background="@color/windowBackground"
-                        android:src="@drawable/ic_marker" />
+                        android:src="@drawable/ic_marker_blue" />
 
                     <ImageButton
                         android:id="@+id/img_btn_phone"
@@ -149,7 +149,7 @@
                         android:layout_alignTop="@+id/tv_phone_nr"
                         android:layout_marginLeft="24dp"
                         android:background="@color/windowBackground"
-                        android:src="@drawable/ic_phone" />
+                        android:src="@drawable/ic_phone_blue" />
 
                     <ImageView
                         android:id="@+id/img_btn_works"
@@ -158,7 +158,7 @@
                         android:layout_alignTop="@+id/tv_working_hours"
                         android:layout_marginLeft="24dp"
                         android:background="@color/windowBackground"
-                        android:src="@drawable/ic_clock" />
+                        android:src="@drawable/ic_clock_blue" />
 
                 </RelativeLayout>
             </android.support.v4.widget.NestedScrollView>
@@ -168,7 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
-            android:src="@android:drawable/ic_dialog_email"
+            android:src="@drawable/ic_fork"
             app:layout_anchor="@id/img_rest"
             app:layout_anchorGravity="bottom|end" />
 

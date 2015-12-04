@@ -25,14 +25,14 @@
     <string name="price_from">Kaina nuo</string>
     <string name="price_to">Kaina iki</string>
     <string name="selected_distance">Pasirinkta</string>
-    <string name="select_max_distance">Pasirinkite maksimalų atstumą</string>
+    <string name="select_max_distance">Maksimalus atstumas</string>
 
-    <string name="select_price_interv">Pasirinkite kainos ribojimą</string>
+    <string name="select_price_interv">Kainos ribos</string>
     <string name="save_settings">Išsaugoti pakeitimus</string>
     <string name="SelectOptions">Pasirinkite Sąlygas</string>
 
     <string name="no_restaurants">Pagal nustatytas salygas restoranų nerasta</string>
     <string name="title_restaurants_in_map">Restaurants (In map)</string>
     <string name="title_restaurantList">Restaurants</string>
-    no_restaurants
+    <string name="title_activity_scrolling">ScrollingActivity</string>
 </resources>
