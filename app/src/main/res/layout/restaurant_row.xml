@@ -5,7 +5,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dp"
         android:text="Restaurant name"
         android:id="@+id/tv_restaurantName"
         android:layout_alignParentTop="true"
@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
         android:text="Restaurant description"
         android:id="@+id/tv_restaurantDescription"
         android:layout_below="@+id/tv_restaurantName"
@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="16dp"
         android:text="Distance"
         android:id="@+id/tv_restaurantDistance"
         android:layout_marginRight="47dp"
@@ -35,4 +35,14 @@
         android:layout_alignBottom="@+id/tv_restaurantDescription"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <View
+        android:id="@+id/separator_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_restaurantDistance"
+        android:layout_marginTop="16dp"
+        android:background="#CCCCCC" />
+
+
 </RelativeLayout>
