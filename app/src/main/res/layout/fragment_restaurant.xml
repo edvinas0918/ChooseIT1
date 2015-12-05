@@ -93,7 +93,7 @@
                         android:layout_marginTop="16dp"
                         android:text="Distance"
                         android:textColor="@color/colorAccent"
-                        android:textSize="24dp" />
+                        android:textSize="16dp" />
 
                     <View
                         android:id="@+id/separator2"
@@ -128,7 +128,7 @@
                         android:textSize="16dp" />
 
                     <TextView
-                        android:id="@+id/tv_working_hours"
+                        android:id="@+id/tv_workingHours"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignLeft="@+id/tv_restaurant_name"
@@ -159,7 +159,7 @@
                         android:id="@+id/img_btn_works"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tv_working_hours"
+                        android:layout_alignTop="@+id/tv_workingHours"
                         android:layout_marginLeft="24dp"
                         android:background="@color/windowBackground"
                         android:src="@drawable/ic_clock_blue" />

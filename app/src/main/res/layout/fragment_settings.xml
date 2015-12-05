@@ -24,19 +24,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:paddingLeft="16dp"
-                android:text="Restorano nustatymai"
+                android:text="Restaurants"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/tv_select_distance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_restaurant_settings"
+                android:layout_below="@+id/tv_restaurant_settings"
                 android:layout_marginTop="40dp"
                 android:paddingLeft="56dp"
-                android:text="Atstumas"
+                android:text="Distance"
                 android:textSize="16dp" />
 
             <TextView
@@ -79,10 +79,10 @@
                 android:layout_below="@+id/separator_settings"
                 android:layout_marginTop="16dp"
                 android:paddingLeft="16dp"
-                android:text="Patiekalų nustatymai"
+                android:text="Meals"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/colorAccent"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 />
 
 

@@ -57,6 +57,7 @@ public class MapFragment extends SupportMapFragment implements LocationListener,
                              Bundle savedInstanceState) {
         View v = super.onCreateView(inflater, container, savedInstanceState);
         initMap();
+        activity.getSupportActionBar().setTitle("Map");
         return v;
     }
 
@@ -76,8 +77,10 @@ public class MapFragment extends SupportMapFragment implements LocationListener,
     public void addRestaurantMarkersToMap() {
 
         for (Restaurant restaurant : restaurantList){
-            getMap().addMarker(new MarkerOptions().position(activity.getRestaurantLocationLatLng(restaurant))).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
-            getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(activity.getRestaurantLocationLatLng(restaurant), 15));
+            if (restaurant.getLongtitude() != 0) {
+                getMap().addMarker(new MarkerOptions().position(activity.getRestaurantLocationLatLng(restaurant))).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+                getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(activity.getRestaurantLocationLatLng(restaurant), 15));
+            }
         }
 
       /*  List<Restaurant> restaurants = activity.getRestaurantList();

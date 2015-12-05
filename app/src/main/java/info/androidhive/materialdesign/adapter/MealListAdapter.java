@@ -56,7 +56,8 @@ public class MealListAdapter extends RecyclerView.Adapter<MealListAdapter.MealVi
 
         holder.tv_name.setText(tempValues.getMealName());
         holder.tv_ingredients.setText(tempValues.getIngredients());
-        holder.tv_price.setText(String.valueOf(tempValues.getPrice()));
+        String priceString = String.format("%.2f €", tempValues.getPrice());
+        holder.tv_price.setText(priceString);
             /*holder.image.setImageResource(
                     res.getIdentifier(
                             "com.example.kasparas.choseit:drawable/"+tempValues.getImage()

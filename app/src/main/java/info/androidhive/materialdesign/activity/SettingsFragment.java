@@ -51,7 +51,8 @@ public class SettingsFragment extends Fragment{
     }
 
     public void initSeekbar(View view) {
-        int previous_progress = 7;
+        int previous_progress = activity.GetSeekBarBrogress();
+
         seek_bar = (SeekBar) view.findViewById(R.id.sb_dist);
         seek_bar.setMax(30);
         seek_bar.setDrawingCacheBackgroundColor(Color.CYAN);
@@ -112,6 +113,8 @@ public class SettingsFragment extends Fragment{
                     RestaurantListFragment mf = new RestaurantListFragment();
                     mf.restaurants = activity.getRestaurantList(distance);
                     activity.changeFragment(R.id.container_body, mf);
+
+                    activity.getSupportActionBar().setTitle("Restaurants");
                 } catch (NullPointerException ex) {
                     Context context = getActivity();
                     CharSequence text = "Please enable GPS";
@@ -131,6 +134,7 @@ public class SettingsFragment extends Fragment{
             }
         });
 
+        activity.getSupportActionBar().setTitle("Settings");
         return view;
     }
 

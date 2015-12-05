@@ -17,6 +17,15 @@ public class Restaurant {
     private double longtitude;
     private List<Meal> mealList;
     private String phoneNumber;
+    private String workingHours;
+
+    public String getWorkingHours() {
+        return workingHours;
+    }
+
+    public void setWorkingHours(String workingHours) {
+        this.workingHours = workingHours;
+    }
 
     public String getPhoneNumber() {
         return phoneNumber;

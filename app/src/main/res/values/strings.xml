@@ -20,8 +20,8 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_settings">Settings</string>
 
-    <string name="price_from">Kaina nuo</string>
-    <string name="price_to">Kaina iki</string>
+    <string name="price_from">Price from</string>
+    <string name="price_to">Price to</string>
     <string name="selected_distance">Pasirinkta</string>
     <string name="select_max_distance">Maksimalus atstumas</string>
 

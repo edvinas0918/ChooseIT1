@@ -9,24 +9,24 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Gong Bao",
+          "Name": "Gong Bao",
           "Price": " 3 ",
-          "Ingredients":  " Chicken, Orange"
+          "Ingredients":  "Chicken, Orange"
         },
         {
-          "Name": " Gua Bao",
+          "Name": "Gua Bao",
           "Price": " 6 ",
-          "Ingredients": " Chicken, Tomato"
+          "Ingredients": "Chicken, Tomato"
         },
         {
-          "Name": " FishAndChips ",
+          "Name": "FishAndChips ",
           "Price": " 5 ",
-          "Ingredients": " Fish, Potato"
+          "Ingredients": "Fish, Potato"
         },
         {
-          "Name": " Vyšnaitės ",
+          "Name": "Vyšnaitės ",
           "Price": " 4 ",
-          "Ingredients": " Chicken, Tomato, CherrySauce "
+          "Ingredients": "Chicken, Tomato, CherrySauce "
         }
       ]
     },
@@ -39,24 +39,24 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Kaprio",
+          "Name": "Kaprio",
           "Price": " 3.50 ",
-          "Ingredients": " Pickles, Salami"
+          "Ingredients": "Pickles, Salami"
         },
         {
-          "Name": " Metų laikai",
+          "Name": "Metų laikai",
           "Price": " 4.20 ",
-          "Ingredients": " Cheese, beef"
+          "Ingredients": "Cheese, beef"
         },
         {
-          "Name": " Havajų ",
+          "Name": "Havajų ",
           "Price": " 4.70 ",
-          "Ingredients": " Cheese, salamni, pineapple"
+          "Ingredients": "Cheese, salamni, pineapple"
         },
         {
-          "Name": " Studentų ",
+          "Name": "Studentų ",
           "Price": " 2.49 ",
-          "Ingredients": " Cheese, salami"
+          "Ingredients": "Cheese, salami"
         }
       ]
     },
@@ -69,24 +69,24 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Šefo paprastoji",
+          "Name": "Šefo paprastoji",
           "Price": " 2.13 ",
-          "Ingredients": " Pickles, Salami"
+          "Ingredients": "Pickles, Salami"
         },
         {
-          "Name": " Margarita ",
+          "Name": "Margarita ",
           "Price": " 1.79 ",
-          "Ingredients": " Pickles, Salami"
+          "Ingredients": "Pickles, Salami"
         },
         {
-          "Name": " Šefo perlektoji ",
+          "Name": "Šefo perlektoji ",
           "Price": " 2.59 ",
-          "Ingredients": " Pickles, Salami"
+          "Ingredients": "Pickles, Salami"
         },
         {
-          "Name": " Storapadė ",
+          "Name": "Storapadė ",
           "Price": " 3.13 ",
-          "Ingredients": " Pickles, Salami"
+          "Ingredients": "Pickles, Salami"
         }
       ]
     },
@@ -99,24 +99,24 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Charčio ",
+          "Name": "Charčio ",
           "Price": " 3.49 ",
-          "Ingredients": " Beef, potatoes"
+          "Ingredients": "Beef, potatoes"
         },
         {
-          "Name": " Cepelinai ",
+          "Name": "Cepelinai ",
           "Price": " 2.89 ",
-          "Ingredients": " Pork, potatoes"
+          "Ingredients": "Pork, potatoes"
         },
         {
-          "Name": " Aviena vyno padaže",
+          "Name": "Aviena vyno padaže",
           "Price": " 5.40 ",
-          "Ingredients": " lamb, vine "
+          "Ingredients": "lamb, vine "
         },
         {
-          "Name": " Kiaulienos šašlykas ",
+          "Name": "Kiaulienos šašlykas ",
           "Price": " 7.12 ",
-          "Ingredients": " Pork, tomato"
+          "Ingredients": "Pork, tomato"
         }
       ]
     },
@@ -129,7 +129,7 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Tom Yum ",
+          "Name": "Tom Yum ",
           "Price": " 5.50 ",
           "Ingredients": "Shrimps, rice"
         },
@@ -139,9 +139,9 @@
           "Ingredients": "Potatoes, tomato souce, pork, onions"
         },
         {
-          "Name": " Tailandietiški makaronai",
+          "Name": "Tailandietiški makaronai",
           "Price": " 5.40 ",
-          "Ingredients": " Pasta, shrimps"
+          "Ingredients": "Pasta, shrimps"
         },
         {
           "Name": "Tailandietiški koldūnai ",
@@ -160,7 +160,7 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Tom Yum ",
+          "Name": "Tom Yum ",
           "Price": " 5.50 ",
           "Ingredients": "Shrimps, rice"
         },
@@ -170,9 +170,9 @@
           "Ingredients": "Potatoes, tomato souce, pork, onions"
         },
         {
-          "Name": " Tailandietiški makaronai",
+          "Name": "Tailandietiški makaronai",
           "Price": " 5.40 ",
-          "Ingredients": " Pasta, shrimps"
+          "Ingredients": "Pasta, shrimps"
         },
         {
           "Name": "Tailandietiški koldūnai ",
@@ -180,27 +180,27 @@
           "Ingredients": "Dumblings, shrimps"
         },
         {
-          "Name": " Charčio ",
+          "Name": "Charčio ",
           "Price": " 3.49 ",
-          "Ingredients": " Beef, potatoes"
+          "Ingredients": "Beef, potatoes"
         },
         {
-          "Name": " Cepelinai ",
+          "Name": "Cepelinai ",
           "Price": " 2.89 ",
-          "Ingredients": " Pork, potatoes"
+          "Ingredients": "Pork, potatoes"
         },
         {
-          "Name": " Aviena vyno padaže",
+          "Name": "Aviena vyno padaže",
           "Price": " 5.40 ",
-          "Ingredients": " lamb, vine "
+          "Ingredients": "lamb, vine "
         },
         {
-          "Name": " Kiaulienos šašlykas ",
+          "Name": "Kiaulienos šašlykas ",
           "Price": " 7.12 ",
-          "Ingredients": " Pork, tomato"
+          "Ingredients": "Pork, tomato"
         },
         {
-          "Name": " Tom Yan ",
+          "Name": "Tom Yan ",
           "Price": " 5.50 ",
           "Ingredients": "Shrimps, rice"
         },
@@ -210,29 +210,29 @@
           "Ingredients": "Pasta, tomato souce, pork, onions"
         },
         {
-          "Name": " Tailandietiški ryžiai",
+          "Name": "Tailandietiški ryžiai",
           "Price": " 5.40 ",
-          "Ingredients": " Rice, shrimps"
+          "Ingredients": "Rice, shrimps"
         },
         {
-          "Name": " Čili sriuba ",
+          "Name": "Čili sriuba ",
           "Price": " 3.49 ",
-          "Ingredients": " Beef, cheese, tomato"
+          "Ingredients": "Beef, cheese, tomato"
         },
         {
-          "Name": " Balandėliai ",
+          "Name": "Balandėliai ",
           "Price": " 2.89 ",
-          "Ingredients": " Pork, potatoes"
+          "Ingredients": "Pork, potatoes"
         },
         {
-          "Name": " Jautiena vyno padaže",
+          "Name": "Jautiena vyno padaže",
           "Price": " 5.40 ",
-          "Ingredients": " Beef, vine "
+          "Ingredients": "Beef, vine "
         },
         {
-          "Name": " Jautienos šašlykas ",
+          "Name": "Jautienos šašlykas ",
           "Price": " 7.12 ",
-          "Ingredients": " Beef, potatoes, tomato"
+          "Ingredients": "Beef, potatoes, tomato"
         }
       ]
     },
@@ -245,7 +245,7 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Tom Yum ",
+          "Name": "Tom Yum ",
           "Price": " 5.50 ",
           "Ingredients": "Shrimps, rice"
         },
@@ -255,9 +255,9 @@
           "Ingredients": "Potatoes, tomato souce, pork, onions"
         },
         {
-          "Name": " Tailandietiški makaronai",
+          "Name": "Tailandietiški makaronai",
           "Price": " 5.40 ",
-          "Ingredients": " Pasta, shrimps"
+          "Ingredients": "Pasta, shrimps"
         },
         {
           "Name": "Tailandietiški koldūnai ",
@@ -275,7 +275,7 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Tom Yum ",
+          "Name": "Tom Yum ",
           "Price": " 5.50 ",
           "Ingredients": "Shrimps, rice"
         },
@@ -285,9 +285,9 @@
           "Ingredients": "Potatoes, tomato souce, pork, onions"
         },
         {
-          "Name": " Tailandietiški makaronai",
+          "Name": "Tailandietiški makaronai",
           "Price": " 5.40 ",
-          "Ingredients": " Pasta, shrimps"
+          "Ingredients": "Pasta, shrimps"
         },
         {
           "Name": "Tailandietiški koldūnai ",
@@ -295,27 +295,27 @@
           "Ingredients": "Dumblings, shrimps"
         },
         {
-          "Name": " Charčio ",
+          "Name": "Charčio ",
           "Price": " 3.49 ",
-          "Ingredients": " Beef, potatoes"
+          "Ingredients": "Beef, potatoes"
         },
         {
-          "Name": " Cepelinai ",
+          "Name": "Cepelinai ",
           "Price": " 2.89 ",
-          "Ingredients": " Pork, potatoes"
+          "Ingredients": "Pork, potatoes"
         },
         {
-          "Name": " Aviena vyno padaže",
+          "Name": "Aviena vyno padaže",
           "Price": " 5.40 ",
-          "Ingredients": " lamb, vine "
+          "Ingredients": "lamb, vine "
         },
         {
-          "Name": " Kiaulienos šašlykas ",
+          "Name": "Kiaulienos šašlykas ",
           "Price": " 7.12 ",
-          "Ingredients": " Pork, tomato"
+          "Ingredients": "Pork, tomato"
         },
         {
-          "Name": " Tom Yan ",
+          "Name": "Tom Yan ",
           "Price": " 5.50 ",
           "Ingredients": "Shrimps, rice"
         },
@@ -325,29 +325,29 @@
           "Ingredients": "Pasta, tomato souce, pork, onions"
         },
         {
-          "Name": " Tailandietiški ryžiai",
+          "Name": "Tailandietiški ryžiai",
           "Price": " 5.40 ",
-          "Ingredients": " Rice, shrimps"
+          "Ingredients": "Rice, shrimps"
         },
         {
-          "Name": " Čili sriuba ",
+          "Name": "Čili sriuba ",
           "Price": " 3.49 ",
-          "Ingredients": " Beef, cheese, tomato"
+          "Ingredients": "Beef, cheese, tomato"
         },
         {
-          "Name": " Balandėliai ",
+          "Name": "Balandėliai ",
           "Price": " 2.89 ",
-          "Ingredients": " Pork, potatoes"
+          "Ingredients": "Pork, potatoes"
         },
         {
-          "Name": " Jautiena vyno padaže",
+          "Name": "Jautiena vyno padaže",
           "Price": " 5.40 ",
-          "Ingredients": " Beef, vine "
+          "Ingredients": "Beef, vine "
         },
         {
-          "Name": " Jautienos šašlykas ",
+          "Name": "Jautienos šašlykas ",
           "Price": " 7.12 ",
-          "Ingredients": " Beef, potatoes, tomato"
+          "Ingredients": "Beef, potatoes, tomato"
         }
       ]
     },
@@ -360,7 +360,7 @@
       "Hours": "10:30 - 24:00",
       "Meals": [
         {
-          "Name": " Tom Yum ",
+          "Name": "Tom Yum ",
           "Price": " 5.50 ",
           "Ingredients": "Shrimps, rice"
         },
@@ -370,9 +370,9 @@
           "Ingredients": "Potatoes, tomato souce, pork, onions"
         },
         {
-          "Name": " Tailandietiški makaronai",
+          "Name": "Tailandietiški makaronai",
           "Price": " 5.40 ",
-          "Ingredients": " Pasta, shrimps"
+          "Ingredients": "Pasta, shrimps"
         },
         {
           "Name": "Tailandietiški koldūnai ",
@@ -380,27 +380,27 @@
           "Ingredients": "Dumblings, shrimps"
         },
         {
-          "Name": " Charčio ",
+          "Name": "Charčio ",
           "Price": " 3.49 ",
-          "Ingredients": " Beef, potatoes"
+          "Ingredients": "Beef, potatoes"
         },
         {
-          "Name": " Cepelinai ",
+          "Name": "Cepelinai ",
           "Price": " 2.89 ",
-          "Ingredients": " Pork, potatoes"
+          "Ingredients": "Pork, potatoes"
         },
         {
-          "Name": " Aviena vyno padaže",
+          "Name": "Aviena vyno padaže",
           "Price": " 5.40 ",
-          "Ingredients": " lamb, vine "
+          "Ingredients": "lamb, vine "
         },
         {
-          "Name": " Kiaulienos šašlykas ",
+          "Name": "Kiaulienos šašlykas ",
           "Price": " 7.12 ",
-          "Ingredients": " Pork, tomato"
+          "Ingredients": "Pork, tomato"
         },
         {
-          "Name": " Tom Yan ",
+          "Name": "Tom Yan ",
           "Price": " 5.50 ",
           "Ingredients": "Shrimps, rice"
         },
@@ -410,29 +410,29 @@
           "Ingredients": "Pasta, tomato souce, pork, onions"
         },
         {
-          "Name": " Tailandietiški ryžiai",
+          "Name": "Tailandietiški ryžiai",
           "Price": " 5.40 ",
-          "Ingredients": " Rice, shrimps"
+          "Ingredients": "Rice, shrimps"
         },
         {
-          "Name": " Čili sriuba ",
+          "Name": "Čili sriuba ",
           "Price": " 3.49 ",
-          "Ingredients": " Beef, cheese, tomato"
+          "Ingredients": "Beef, cheese, tomato"
         },
         {
-          "Name": " Balandėliai ",
+          "Name": "Balandėliai ",
           "Price": " 2.89 ",
-          "Ingredients": " Pork, potatoes"
+          "Ingredients": "Pork, potatoes"
         },
         {
-          "Name": " Jautiena vyno padaže",
+          "Name": "Jautiena vyno padaže",
           "Price": " 5.40 ",
-          "Ingredients": " Beef, vine "
+          "Ingredients": "Beef, vine "
         },
         {
-          "Name": " Jautienos šašlykas ",
+          "Name": "Jautienos šašlykas ",
           "Price": " 7.12 ",
-          "Ingredients": " Beef, potatoes, tomato"
+          "Ingredients": "Beef, potatoes, tomato"
         }
       ]
     }

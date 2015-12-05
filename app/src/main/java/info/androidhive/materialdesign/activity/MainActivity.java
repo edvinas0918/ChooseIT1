@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        saveOptionsValues(10, "0", "10");
+        saveOptionsValues(30, "0", "9.5");
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -114,14 +114,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
-        }
-
-        if(id == R.id.action_search){
-            Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
-            return true;
+            Fragment fragment = new SettingsFragment();
+            String title = getString(R.string.title_settings);
+            changeFragment(R.id.container_body, fragment);
         }
 
         return super.onOptionsItemSelected(item);
@@ -134,25 +130,20 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     private void displayView(int position) {
         Fragment fragment = null;
-        String title = getString(R.string.app_name);
         switch (position) {
             case 0:
                 fragment = new RestaurantListFragment();
                 ((RestaurantListFragment)fragment).restaurants = getRestaurantList(GetSeekBarBrogress());
-                title = getString(R.string.title_restaurantList);
                 break;
             case 1:
                 fragment = new MapFragment();
                 ((MapFragment)fragment).restaurantList = getRestaurantList(GetSeekBarBrogress());
-                title = getString(R.string.title_restaurants_in_map);
                 break;
             case 2:
                 fragment = new SuggestRestaurantFragment();
-                title=getString(R.string.title_suggest_restaurant);
                 break;
             case 3:
                 fragment = new SettingsFragment();
-                title = getString(R.string.title_settings);
                 break;
             default:
                 break;
@@ -160,7 +151,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         if (fragment != null) {
             changeFragment(R.id.container_body, fragment);
-            getSupportActionBar().setTitle(title);
         }
     }
 
@@ -225,6 +215,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 restaurant.setLattitude(obj.getDouble("Latitude"));
                 restaurant.setLongtitude(obj.getDouble("Longtitude"));
                 restaurant.setPhoneNumber(obj.getString("phoneNumber"));
+                restaurant.setWorkingHours(obj.getString("Hours"));
                 restaurant.setMealList(getMealListFromRestaurantJSONObject(obj));
                 restaurantList.add(restaurant);
             }

@@ -55,6 +55,9 @@ public class SuggestRestaurantFragment extends Fragment {
                 activity.changeFragment(R.id.container_body, fragment);
             }
         });
+
+        activity.getSupportActionBar().setTitle("Suggest Restaurant");
+
         return view;
     }
 

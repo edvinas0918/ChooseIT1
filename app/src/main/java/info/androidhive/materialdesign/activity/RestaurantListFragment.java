@@ -59,7 +59,7 @@ public class RestaurantListFragment extends Fragment{
         adapter = new RestaurantListAdapter(activity, restaurants, this);
         listView.setLayoutManager(llm);
         listView.setAdapter(adapter);
-
+        activity.getSupportActionBar().setTitle("Restaurants");
         return view;
     }
 
@@ -72,6 +72,8 @@ public class RestaurantListFragment extends Fragment{
 
         restaurantFragment.restaurant = restaurants.get(mPosition);
         activity.changeFragment(R.id.container_body, restaurantFragment);
+
+        activity.getSupportActionBar().setTitle("Restaurant");
     }
 
     @Override

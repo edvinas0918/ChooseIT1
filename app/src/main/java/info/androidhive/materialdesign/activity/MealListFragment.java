@@ -67,7 +67,7 @@ public class MealListFragment extends Fragment {
 
         listView.setLayoutManager(llm);
         listView.setAdapter(adapter);
-
+        activity.getSupportActionBar().setTitle("Meals");
         return view;
     }
 

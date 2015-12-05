@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -52,18 +53,24 @@ public class RestaurantFragment extends Fragment {
         ((TextView)view.findViewById(R.id.tv_adress)).setText(restaurant.getAddress());
         ((TextView)view.findViewById(R.id.tv_phone_nr)).setText(restaurant.getPhoneNumber());
         Float distance = restaurant.getDistanceTo(activity.getLocation())/1000;
-        String distanceString = (distance == 0) ? "Not set" : String.format("%.1f km", distance);
+        String distanceString = (distance == 0) ? "Distance unknown" : String.format("%.1f km", distance);
         ((TextView)view.findViewById(R.id.tv_rest_dist)).setText(distanceString);
+        ((TextView)view.findViewById(R.id.tv_workingHours)).setText(restaurant.getWorkingHours());
 
         ImageButton mapButton = (ImageButton) view.findViewById(R.id.img_btn_adress);
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MapFragment mf = new MapFragment();
-                ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
-                restaurants.add(restaurant);
-                mf.restaurantList = restaurants;
-                activity.changeFragment(R.id.container_body, mf);
+                if (restaurant.getLongtitude() == 0) {
+                    Toast.makeText(activity, "Location unknown!", Toast.LENGTH_SHORT).show();
+                } else {
+                    MapFragment mf = new MapFragment();
+                    ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
+                    restaurants.add(restaurant);
+                    mf.restaurantList = restaurants;
+                    activity.changeFragment(R.id.container_body, mf);
+                    activity.getSupportActionBar().setTitle("Map");
+                }
             }
         });
 
@@ -90,8 +97,11 @@ public class RestaurantFragment extends Fragment {
                 MealListFragment mealListFragment = new MealListFragment();
                 mealListFragment.restaurant = restaurant;
                 activity.changeFragment(R.id.container_body, mealListFragment);
+                activity.getSupportActionBar().setTitle("Meals");
             }
         });
+
+        activity.getSupportActionBar().setTitle("Restaurant");
         /*Resources res = getResources();
         list = (ListView) view.findViewById(R.id.lv_mealsList);
 
