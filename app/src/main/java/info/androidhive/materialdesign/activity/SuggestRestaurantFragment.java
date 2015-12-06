@@ -48,6 +48,7 @@ public class SuggestRestaurantFragment extends Fragment {
                 newRestaurant.setRestName(restaurantName);
                 newRestaurant.setAddress(restaurantAddress);
                 newRestaurant.setPhoneNumber(phoneNumber);
+                newRestaurant.setWorkingHours("Unknown");
 
                 activity.saveNewRestaurant(newRestaurant);
                 RestaurantListFragment fragment = new RestaurantListFragment();

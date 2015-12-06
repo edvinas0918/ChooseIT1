@@ -14,22 +14,14 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.gson.Gson;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
-
 import info.androidhive.materialdesign.R;
 import info.androidhive.materialdesign.model.Meal;
 import info.androidhive.materialdesign.model.Restaurant;
@@ -37,8 +29,8 @@ import info.androidhive.materialdesign.model.Restaurant;
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener{
 
     private int seekBarProgress;
-    private String spinnerPriceFrom;
-    private String spinnerPriceTo;
+    private double spinnerPriceFrom;
+    private double spinnerPriceTo;
 
     public void SetSeekBarProgress(int seekBarProgress) {
         this.seekBarProgress = seekBarProgress;
@@ -48,23 +40,23 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         return this.seekBarProgress;
     }
 
-    public void SetSpinnerPriceFrom(String spinnerPriceFrom) {
+    public void SetSpinnerPriceFrom(double spinnerPriceFrom) {
         this.spinnerPriceFrom = spinnerPriceFrom;
     }
 
-    public String GetSpinnerPriceFrom() {
+    public double GetSpinnerPriceFrom() {
         return this.spinnerPriceFrom;
     }
 
-    public void SetSpinnerPriceTo(String spinnerPriceTo) {
+    public void SetSpinnerPriceTo(double spinnerPriceTo) {
         this.spinnerPriceTo = spinnerPriceTo;
     }
 
-    public String GetSpinnerPriceTo() {
+    public double GetSpinnerPriceTo() {
         return this.spinnerPriceTo;
     }
 
-    public void saveOptionsValues(int seekBarValue, String spinnerFromValue, String spinnerToValue) {
+    public void saveOptionsValues(int seekBarValue, double spinnerFromValue, double spinnerToValue) {
 
         SetSeekBarProgress(seekBarValue);
         SetSpinnerPriceFrom(spinnerFromValue);
@@ -81,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        saveOptionsValues(30, "0", "9.5");
+        saveOptionsValues(30, 0, 9.5);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 

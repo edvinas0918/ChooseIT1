@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_below="@+id/toolbar">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar">
 
 
     <EditText
-        android:layout_width="215dp"
+        android:layout_width="224dp"
+        android:layout_marginTop="56dp"
         android:layout_height="wrap_content"
         android:id="@+id/et_restaurant_name"
         android:inputType="text"
-        android:layout_above="@+id/et_restaurant_address"
         android:layout_alignLeft="@+id/et_restaurant_address"
         android:layout_alignStart="@+id/et_restaurant_address"
         android:layout_marginBottom="67dp"
@@ -20,6 +27,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPostalAddress"
         android:ems="10"
+        android:layout_below="@id/et_restaurant_name"
         android:id="@+id/et_restaurant_address"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/et_phone_number"
@@ -31,16 +39,17 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
+        android:layout_below="@+id/et_restaurant_address"
         android:id="@+id/et_phone_number"
-        android:layout_marginBottom="161dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="74dp"
         android:layout_centerHorizontal="true"
-        android:hint="Restaurant phone numbe" />
+        android:hint="Restaurant phone number" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Suggest"
+        android:layout_below="@+id/et_phone_number"
         android:id="@+id/btn_suggest_restaurant"
         android:layout_alignTop="@+id/et_phone_number"
         android:layout_alignLeft="@+id/et_phone_number"
@@ -49,3 +58,4 @@
         android:layout_alignRight="@+id/et_phone_number"
         android:layout_alignEnd="@+id/et_phone_number" />
 </RelativeLayout>
+    </ScrollView>

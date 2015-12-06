@@ -55,6 +55,9 @@ public class MealListAdapter extends RecyclerView.Adapter<MealListAdapter.MealVi
         Meal tempValues = data.get(position);
 
         holder.tv_name.setText(tempValues.getMealName());
+        if(tempValues.getIngredients().length()>25)
+            holder.tv_ingredients.setText(tempValues.getIngredients().substring(0,24)+"..");
+        else
         holder.tv_ingredients.setText(tempValues.getIngredients());
         String priceString = String.format("%.2f €", tempValues.getPrice());
         holder.tv_price.setText(priceString);

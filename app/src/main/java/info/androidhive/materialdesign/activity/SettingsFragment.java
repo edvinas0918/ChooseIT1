@@ -33,6 +33,8 @@ public class SettingsFragment extends Fragment{
     }
 
     public void initPriceSpinners (View view){
+        double previousPriceFrom = activity.GetSpinnerPriceFrom();
+        double previoustPriceTo = activity.GetSpinnerPriceTo();
         Double[] spinnerArr = new Double[20];
         int iter = 0;
         for (double x = 0;x<=10;x+=0.5) {
@@ -48,6 +50,9 @@ public class SettingsFragment extends Fragment{
         spinnerTo = (Spinner) view.findViewById(R.id.sp_pr_to);
         spinnerFrom.setAdapter(spinnerAdapter);
         spinnerTo.setAdapter(spinnerAdapter);
+        spinnerFrom.setSelection(spinnerAdapter.getPosition(previousPriceFrom));
+        spinnerTo.setSelection(spinnerAdapter.getPosition(previoustPriceTo));
+
     }
 
     public void initSeekbar(View view) {
@@ -98,8 +103,8 @@ public class SettingsFragment extends Fragment{
         initPriceSpinners(view);
 
         //add save button
-        Button mapButton = (Button) view.findViewById(R.id.btn_select_options_next);
-        mapButton.setOnClickListener(new View.OnClickListener() {
+        Button selectOptionsSave = (Button) view.findViewById(R.id.btn_select_options_next);
+        selectOptionsSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
@@ -109,7 +114,8 @@ public class SettingsFragment extends Fragment{
                     if (valueFrom > valueTo)
                         throw new Exception("Incorrect choice");
 
-                    activity.saveOptionsValues(seek_bar.getProgress(), spinnerFrom.getSelectedItem().toString(), spinnerTo.getSelectedItem().toString());
+                    activity.saveOptionsValues(seek_bar.getProgress(), Double.valueOf
+                            (spinnerFrom.getSelectedItem().toString()), Double.valueOf(spinnerTo.getSelectedItem().toString()));
                     RestaurantListFragment mf = new RestaurantListFragment();
                     mf.restaurants = activity.getRestaurantList(distance);
                     activity.changeFragment(R.id.container_body, mf);
